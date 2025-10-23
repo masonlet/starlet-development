@@ -1,8 +1,10 @@
 # StarletDevelopment
-The **StarletDevelopment** repository acts as a central hub for coordinated development and testing, bringing together all Starlets libraries. 
+The **StarletDevelopment** repository acts as a central hub for coordinated development and testing, bringing together all Starlet libraries. 
+
+⚠️ **Starlet** is a long-term personal project that I continue to develop and refine in the background. It serves as a foundation for future game and graphics projects and is **not intended for public release**. It is public to demonstrate my skills in C++, OpenGL, engine design, and software architecture, reflecting my commitment to learning, experimentation, and building complex systems.
 
 ## 🚀 Starlet Ecosystem
-The **Starlet** ecyostem is a collection of light, modular C++ libraries designed for creating OpenGL applications. 
+The **Starlet** ecosystem is a collection of light, modular C++ libraries designed for creating OpenGL applications. 
 
 - [**StarletEngine**](https://github.com/Masonlet/StarletEngine) – Core game/graphics engine (C++ / OpenGL)
 - [**StarletMath**](https://github.com/Masonlet/StarletMath) – Lightweight Header-only math library
@@ -11,7 +13,7 @@ The **Starlet** ecyostem is a collection of light, modular C++ libraries designe
 - [**StarletGraphics**](https://github.com/Masonlet/StarletGraphics) – Mesh, texture, shader management
 - [**StarletSerializer**](https://github.com/Masonlet/StarletSerializer) – Lightweight file/text parser/writer
 - [**StarletTests**](https://github.com/Masonlet/StarletTests) – Unit tests for Starlet libraries using Google Test
-- [**StarletSamples**](https://github.com/Masonlet/StarletSamples) – Engine demonstration & sample scenes.
+- [**StarletSamples**](https://github.com/Masonlet/StarletSamples) – Engine demonstration & sample scenes
 - [**StarletStarter**](https://github.com/Masonlet/StarletStarter) - Starting template for new Starlet game projects
 
 ## Building the Project
