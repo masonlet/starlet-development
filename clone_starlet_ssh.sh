@@ -6,6 +6,7 @@ test_repo=${1:-StarletSamples}
 
 repos=(
   ${user}/StarletMath 
+  ${user}/StarletLogger
   ${user}/StarletControls
   ${user}/StarletScene 
   ${user}/StarletGraphics 

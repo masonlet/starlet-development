@@ -13,6 +13,7 @@ endif()
 
 set(modules
   StarletMath
+  StarletLogger
   StarletControls
   StarletScene
   StarletGraphics
