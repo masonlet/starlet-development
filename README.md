@@ -12,6 +12,7 @@ The **Starlet** ecosystem is a collection of light, modular C++ libraries design
 - [**StarletScene**](https://github.com/Masonlet/StarletScene) – ECS based scene management
 - [**StarletGraphics**](https://github.com/Masonlet/StarletGraphics) – Mesh, texture, shader management
 - [**StarletSerializer**](https://github.com/Masonlet/StarletSerializer) – Lightweight file/text parser/writer
+- [**StarletLogger**](https://github.com/Masonlet/StarletLogger) – Logging and debugging utilities
 - [**StarletTests**](https://github.com/Masonlet/StarletTests) – Unit tests for Starlet libraries using Google Test
 - [**StarletSamples**](https://github.com/Masonlet/StarletSamples) – Engine demonstration & sample scenes
 - [**StarletStarter**](https://github.com/Masonlet/StarletStarter) - Starting template for new Starlet game projects
