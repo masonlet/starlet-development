@@ -28,15 +28,3 @@ cd starlet-development
 
 ### 2. Clone the Starlet Repositories
 Run one of the included `clone_starlet_` files
-
-### 3. Build the Project
-- **Linux**:
-  ```bash
-  make
-  ```
-
-- **Windows**:
-  ```bash
-  cmake --build .
-  ```
-  Or open the generated `.sln` file in Visual Studio and build the solution.

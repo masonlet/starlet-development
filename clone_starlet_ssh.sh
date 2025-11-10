@@ -1,23 +1,31 @@
-mkdir -p starlet
-cd starlet || exit
-
-user=masonlet
+STARLET_DIR=starlet
+USER=masonlet
 test_repo=${1:-starlet-samples}
 
 repos=(
-  ${user}/starlet-math 
-  ${user}/starlet-logger
-  ${user}/starlet-controls
-  ${user}/starlet-scene 
-  ${user}/starlet-graphics 
-  ${user}/starlet-serializer
-  ${user}/starlet-engine 
-  ${user}/${test_repo}
+  ${USER}/starlet-math
+  ${USER}/starlet-logger
+  ${USER}/starlet-controls
+  ${USER}/starlet-scene
+  ${USER}/starlet-graphics
+  ${USER}/starlet-serializer
+  ${USER}/starlet-engine
+  ${USER}/${test_repo}
 )
 
+mkdir -p ${STARLET_DIR}
+cd ${STARLET_DIR} || exit 1
+
+echo "Cloning repositories"
+echo ""
 for repo in "${repos[@]}"; do
-  if [ ! -d "$repo" ]; then
-    git clone git@github.com:$repo.git
+  repo_name=${repo#*/}
+  if [ ! -d "${repo_name}" ]; then
+    echo "Cloning ${repo}"
+    git clone git@github.com:${repo}.git || {
+      echo "Failed to clone ${repo}"
+      exit 1
+    }
   else
     echo "$repo already exists!"
   fi
@@ -26,10 +34,21 @@ done
 
 echo "Finished cloning, building.."
 cd ..
-
 mkdir -p build
-cd build || exit
-cmake -DBUILD_LOCAL=ON -DTEST_REPO=${test_repo} ..
+cd build || exit 1
 
-echo "Finished building, closing.."
+cmake -DBUILD_LOCAL=ON -DTEST_REPO=${test_repo} .. || {
+  echo "CMake configuration failed"
+  exit 1
+}
+
+echo ""
+echo "Building project..."
+cmake --build . || {
+  echo "Build failed"
+  exit 1
+}
+
+echo ""
+echo "Build complete!"
 sleep 5
