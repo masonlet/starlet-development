@@ -1,17 +1,17 @@
-mkdir -p Starlet
-cd Starlet || exit
+mkdir -p starlet
+cd starlet || exit
 
-user=Masonlet
-test_repo=${1:-StarletSamples}
+user=masonlet
+test_repo=${1:-starlet-samples}
 
 repos=(
-  ${user}/StarletMath 
-  ${user}/StarletLogger
-  ${user}/StarletControls
-  ${user}/StarletScene 
-  ${user}/StarletGraphics 
-  ${user}/StarletSerializer
-  ${user}/StarletEngine 
+  ${user}/starlet-math 
+  ${user}/starlet-logger
+  ${user}/starlet-controls
+  ${user}/starlet-scene 
+  ${user}/starlet-graphics 
+  ${user}/starlet-serializer
+  ${user}/starlet-engine 
   ${user}/${test_repo}
 )
 

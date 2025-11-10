@@ -5,20 +5,20 @@ project(${DEV_NAME} LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(EXTERN_DIR "${CMAKE_SOURCE_DIR}/Starlet")
 set(BUILD_LOCAL OFF CACHE BOOL "Flag if Starlet files are already locally fetched")
-set(TEST_REPO StarletSamples CACHE STRING "Test repo to be built")
+set(TEST_REPO starlet-samples CACHE STRING "Test repo to be built")
 
 if(NOT EXISTS "${EXTERN_DIR}/${TEST_REPO}/CMakeLists.txt")
     message(FATAL_ERROR "Selected test repo '${TEST_REPO}' not found under ${EXTERN_DIR}")
 endif()
 
 set(modules
-  StarletMath
-  StarletLogger
-  StarletControls
-  StarletScene
-  StarletGraphics
-  StarletSerializer
-  StarletEngine
+  starlet-math
+  starlet-logger
+  starlet-controls
+  starlet-scene
+  starlet-graphics
+  starlet-serializer
+  starlet-engine
   ${TEST_REPO}
 )
 
