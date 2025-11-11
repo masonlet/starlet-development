@@ -1,15 +1,16 @@
 STARLET_DIR=starlet
 USER=masonlet
 test_repo=${1:-starlet-samples}
+clone_method=${2:-https}
 
 repos=(
-  ${USER}/starlet-math 
+  ${USER}/starlet-math
   ${USER}/starlet-logger
-  ${USER}/starlet-controls 
-  ${USER}/starlet-scene 
-  ${USER}/starlet-graphics 
+  ${USER}/starlet-controls
+  ${USER}/starlet-scene
+  ${USER}/starlet-graphics
   ${USER}/starlet-serializer
-  ${USER}/starlet-engine 
+  ${USER}/starlet-engine
   ${USER}/${test_repo}
 )
 
@@ -22,10 +23,17 @@ for repo in "${repos[@]}"; do
   repo_name=${repo#*/}
   if [ ! -d "${repo_name}" ]; then
     echo "Cloning ${repo}"
-    git clone https://github.com/${repo}.git || {
-      echo "Failed to clone ${repo}"
-      exit 1
-    }
+    if [ "${clone_method}" = "ssh" ]; then
+      git clone git@github.com:${repo}.git || {
+        echo "Failed to clone ${repo}"
+        exit 1
+      }
+    else
+      git clone https://github.com/${repo}.git || {
+        echo "Failed to clone ${repo}"
+        exit 1
+      }
+    fi
   else
     echo "$repo already exists!"
   fi
