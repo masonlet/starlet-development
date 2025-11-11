@@ -1,15 +1,35 @@
-# Starlet Development
-The **Starlet Development** repository acts as a central hub for coordinated development and testing, bringing together all Starlet libraries. 
+# ⚠️ **This Repository is Archived** ⚠️
+This repository has been **replaced** by [**Starlet Setup**](https://github.com/masonlet/starlet-setup) - a more flexible Python tool for setting up Starlet development environments.
 
-⚠️ **Starlet** is a long-term personal project that I continue to develop and refine in the background. It serves as a foundation for future game and graphics projects and is **not intended for public release**. It is public to demonstrate my skills in C++, OpenGL, engine design, and software architecture, reflecting my commitment to learning, experimentation, and building complex systems.
+## Why the change?
+- **More flexible**: Works with any combination of Starlet projects and libraries
+- **Single or Batch**: Clone individual repos, or entire ecosystems
+- **Cleaner Workflow**: Just a tool, no need for a separate development repository for each project.
+
+## Quick Start with Starlet Setup
+```bash
+# Clone the setup tool
+git clone https://github.com/masonlet/starlet-setup.git
+cd starlet-setup
+
+# Set up complete Starlet environment
+python starlet-setup.py --batch masonlet starlet-samples
+```
+
+---
+
+# Starlet Development
+The **Starlet Development** repository acted as a central hub for coordinated development and testing, bringing together all Starlet libraries. 
 
 ## 🚀 Starlet Ecosystem
-The **Starlet** ecosystem is a collection of light, modular C++ libraries designed for creating OpenGL applications. 
+The **Starlet** ecosystem is a collection of lightweight, modular C++ libraries designed for creating OpenGL applications. 
+
+**Starlet** is a long-term personal project that I continue to develop and refine in the background. It serves as a foundation for future game and graphics projects and is **not intended for public release**. It is public to demonstrate my skills in C++, OpenGL, engine design, and software architecture, reflecting my commitment to learning, experimentation, and building complex systems.
 
 - [**Starlet Engine**](https://github.com/masonlet/starlet-engine): Core game/graphics engine (C++ / OpenGL)
-- [**Starlet Math**](https://github.com/masonlet/starlet-math): Lightweight Header-only math library
+- [**Starlet Math**](https://github.com/masonlet/starlet-math): Lightweight header-only math library
 - [**Starlet Controls**](https://github.com/masonlet/starlet-controls): Input & control management
-- [**Starlet Scene**](https://github.com/masonlet/starlet-scene): ECS based scene management
+- [**Starlet Scene**](https://github.com/masonlet/starlet-scene): ECS-based scene management
 - [**Starlet Graphics**](https://github.com/masonlet/starlet-graphics): Mesh, texture, shader management
 - [**Starlet Serializer**](https://github.com/masonlet/starlet-serializer): Lightweight file/text parser/writer
 - [**Starlet Logger**](https://github.com/masonlet/starlet-logger): Logging and debugging utilities
